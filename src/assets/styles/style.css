@@ -1,0 +1,326 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    font-family: system, -apple-system, '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+    background: #36393e;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    overflow: hidden;
+}
+
+.close:hover {
+    background: rgba(52, 152, 219,1.0);
+}
+
+.close {
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #1e2124;
+    padding: 8px 12px;
+    font-size: 10px;
+    border-radius: 2px;
+    margin: 10px;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out 0s all;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    background: #2e3136;
+    width: 100%;
+    padding: 0 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+header h2 {
+    text-transform: uppercase;
+    margin: 20px;
+}
+
+.main {
+}
+
+.main-heading {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 18px;
+    margin-top: 80px;
+}
+
+.main-description {
+    margin: 0;
+    font-weight: normal;
+    text-align: center;
+    font-family: "Raleway";
+    color: rgba(189, 195, 199,1.0);
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.show-inlineblock {
+    display: inline-block;
+}
+
+.show-inline {
+    display: inline;
+}
+
+.one {
+}
+
+.form {
+}
+
+.one-form {
+}
+
+.section-controls {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.control {
+}
+
+.control-label {
+    float: left;
+    color: #949494;
+    padding: 10px;
+    width: 25%;
+}
+
+.control-element {
+    width: 75%;
+    float: left;
+}
+
+input[type="text"], input[type="url"], input[type="email"], input[type="password"] {
+    border: 0 none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 17px;
+    transition: 0.3s ease-in-out all 0s;
+    color: #949494;
+    font-family: "Raleway";
+    font-weight: normal;
+}
+
+.col-50 {
+	width: 50%;
+	float: left;
+}
+
+input[type="text"]:focus {
+    /*border-bottom: 2px solid #4e5156;*/
+}
+
+input[type="email"] {
+}
+
+.button-wrap {
+}
+
+.button-wrap .button {
+}
+
+.clear {
+    clear: both;
+}
+
+.input {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin: 1em;
+    width: calc(100% - 2em);
+    vertical-align: top;
+}
+
+.input__field {
+    position: relative;
+    display: block;
+    float: right;
+    border-radius: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-appearance: none;
+    /* for box shadows to show on iOS */
+}
+
+.input__field:focus {
+    outline: none;
+}
+
+.input__label {
+    display: inline-block;
+    float: right;
+    padding: 0 1em;
+    width: 40%;
+    color: #949494;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 18px;
+}
+
+.input__label-content {
+    position: relative;
+    display: block;
+    padding: 0.6em 0;
+    width: 100%;
+    font-size: 15px;
+    color: rgba(189, 195, 199,1.0);
+    margin-left: -2px;
+}
+
+/* Hoshi */
+.input--hoshi {
+    overflow: hidden;
+}
+
+.input__field--hoshi {
+    margin-top: 1em;
+    padding: 0.85em 0.25em;
+}
+
+.input__label--hoshi {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 0.25em;
+    width: 100%;
+    height: calc(100% - 1em);
+    text-align: left;
+    pointer-events: none;
+}
+
+.input__label-content--hoshi {
+    position: absolute;
+}
+
+.input__label--hoshi::before, .input__label--hoshi::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 3px);
+    border-bottom: 1px solid #2e3136;
+}
+
+.input__label--hoshi::after {
+    margin-top: 0px;
+    border-bottom: 4px solid red;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+.input__label--hoshi-color-1::after {
+    border-color: rgba(52, 152, 219,1.0);
+}
+
+.input__label--hoshi-color-2::after {
+    border-color: hsl(160, 100%, 50%);
+}
+
+.input__label--hoshi-color-3::after {
+    border-color: hsl(20, 100%, 50%);
+}
+
+.input__field--hoshi:focus + .input__label--hoshi::after, .input--filled .input__label--hoshi::after {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.input__field--hoshi:focus + .input__label--hoshi .input__label-content--hoshi, .input--filled .input__label-content--hoshi {
+    -webkit-animation: anim-1 0.3s forwards;
+    animation: anim-1 0.3s forwards;
+}
+
+@-webkit-keyframes anim-1 {
+    50% {
+        opacity: 0;
+        -webkit-transform: translate3d(1em, 0, 0);
+        transform: translate3d(1em, 0, 0);
+    }
+
+    51% {
+        opacity: 0;
+        -webkit-transform: translate3d(-1em, -40%, 0);
+        transform: translate3d(-1em, -40%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -40%, 0);
+        transform: translate3d(0, -70%, 0);
+    }
+}
+
+@keyframes anim-1 {
+    50% {
+        opacity: 0;
+        -webkit-transform: translate3d(1em, 0, 0);
+        transform: translate3d(1em, 0, 0);
+    }
+
+    51% {
+        opacity: 0;
+        -webkit-transform: translate3d(-1em, -40%, 0);
+        transform: translate3d(-1em, -40%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -40%, 0);
+        transform: translate3d(0, -70%, 0);
+    }
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-right: 40px;
+}
+
+.navigation .next {
+    background: rgba(0,0,0,0.5);
+    padding: 8px;
+    width: 37px;
+    height: 37px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out 0s all;
+}
+
+.navigation .next:hover {
+    background: rgba(52, 152, 219,1.0);
+    cursor:pointer;
+}
+
+.navigation .next i {
+}

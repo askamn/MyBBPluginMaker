@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="./assets/styles/style.css" rel="stylesheet" type="text/css">
+    <link href="./assets/styles/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="./assets/styles/fonts.css" rel="stylesheet" type="text/css">
+    <link href="./assets/styles/fa.css" rel="stylesheet" type="text/css">
+    <link href="./assets/styles/validation.css" rel="stylesheet" type="text/css">
+
+    <script>
+        if (typeof module === 'object') { window.module = module; module = undefined; }
+    </script>
+</head>
+
+<body>
+    <div class="progress"></div>
+    <header>
+        <h2 class="lang-appName"></h2>
+        <div class="description"></div>
+    </header>
+    <div class="close"><i class="fa fa-times"></i></div>
+
+    <div class="main">
+        <div class="navigation">
+            <div class="next"><i class="fa fa-arrow-right"></i></div>
+        </div>
+        <section class="one current" data-next="two">
+            <h2 class="main-heading">General Details</h2>
+            <h4 class="main-description">Fill out the basic details of your plugin.</h4>
+
+            <div class="section-controls">
+                <form class="one-form">
+                    <div class="control field">
+                        <span class="input input--hoshi">
+					        <input class="input__field input__field--hoshi" type="text" required="required" id="input-4" pattern="^[a-z_]+$" data-error-msg="The plugin name should contain only lowercase letters and no spaces." />
+					        <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+						        <span class="input__label-content input__label-content--hoshi lang-PluginName"></span>
+                            </label>
+                        </span>
+                    </div>
+
+                    <div class="control field">
+                        <span class="input input--hoshi">
+					        <input class="input__field input__field--hoshi" type="text" required="required" id="input-4" data-error-msg="This name will be displayed in the plugin section of MyBB's ACP.'" />
+					        <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+						        <span class="input__label-content input__label-content--hoshi lang-PluginFriendlyName"></span>
+                            </label>
+                        </span>
+                    </div>
+
+                    <div class="control field">
+                        <span class="input input--hoshi">
+					        <input class="input__field input__field--hoshi" type="text" required="required" id="input-4" data-error-msg="This is the description of the plugin." />
+					        <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+						        <span class="input__label-content input__label-content--hoshi lang-PluginDescription"></span>
+                            </label>
+                        </span>
+                    </div>
+
+                    <div class="control field">
+                        <span class="input input--hoshi">
+					        <input class="input__field input__field--hoshi" type="text" required="required" id="input-4" name="author" data-error-msg="This will be your name!" />
+					        <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+						        <span class="input__label-content input__label-content--hoshi lang-PluginAuthor"></span>
+                            </label>
+                        </span>
+                    </div>
+
+                    <div class="control field col-50">
+                        <span class="input input--hoshi">
+					        <input class="input__field input__field--hoshi" type="url" required="required" id="input-4" name="plugin-site" data-error-msg="Here you specify the plugin's support website.'" />
+					        <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+						        <span class="input__label-content input__label-content--hoshi lang-PluginWebsite"></span>
+                            </label>
+                        </span>
+                    </div>
+
+                    <div class="control field col-50">
+                        <span class="input input--hoshi">
+					        <input class="input__field input__field--hoshi" type="url" required="required" id="input-4" name="author-site" data-error-msg="This is the url of your website." />
+					        <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+						        <span class="input__label-content input__label-content--hoshi lang-PluginAuthorSite"></span>
+                            </label>
+                        </span>
+                    </div>
+
+                    <div class="clear"></div>
+                </form>
+            </div>
+        </section>
+
+        <section class="two hide">
+            <h2 class="main-heading">Language Files</h2>
+            <h4 class="main-description">Do you need to create separate language files for your plguin?</h4>
+
+        </section>
+    </div>
+</body>
+
+<script src="./assets/js/jquery.js" type="text/javascript"></script>
+<script src="./assets/js/validator.js" type="text/javascript"></script>
+<script src="./assets/js/core.js" type="text/javascript"></script>
+
+<script>
+    if (window.module) module = window.module;
+</script>
+
+</html>
